@@ -14,6 +14,7 @@ return new class extends Migration
        Schema::create('helmets', function (Blueprint $table){
         $table->id();
         $table->string('category');
+        $table->string('style');
         $table->string('brand');
         $table->string('name');
         $table->text('details');

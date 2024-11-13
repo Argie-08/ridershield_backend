@@ -11,6 +11,7 @@ class ProductController extends Controller
 
         $field = $request -> validate ([
             "category" => "required",
+            "style" => "required",
             "brand" => "required",
             "name" => "required",
             "details" => "required",
@@ -34,6 +35,7 @@ class ProductController extends Controller
 
         $product = Helmet::create([
             "category" => $field ["category"],
+            "style" => $field ["style"],
             "brand" => $field ["brand"],
             "name" => $field ["name"],
             "details" => $field ["details"],

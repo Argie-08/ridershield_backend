@@ -13,11 +13,11 @@ ENV REAL_IP_HEADER 1
 ENV APP_ENV production
 ENV APP_DEBUG false
 ENV DB_CONNECTION pgsql
-ENV DB_HOST dpg-cspns3bqf0us73csvg90-a
+ENV DB_HOST dpg-csq8q2aj1k6c738eqnqg-a
 ENV DB_PORT 5432
-ENV DB_DATABASE ridershield_database
-ENV DB_USERNAME ridershield_database_user
-ENV DB_PASSWORD rOqRECqzgTHnKVNWR722WGaH0Tec8b08
+ENV DB_DATABASE ridershield
+ENV DB_USERNAME ridershield_user
+ENV DB_PASSWORD WcsACCedTURERs8re1j1zb1fZoEtrdJL
 
 # Allow composer to run as root
 ENV COMPOSER_ALLOW_SUPERUSER 1
