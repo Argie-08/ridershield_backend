@@ -27,3 +27,9 @@ Route::post("/create-gcash-source/{amount}", [PaymentController::class, 'createP
 
 
 
+
+Route::options('{any}', function () {
+    return response()->json(['message' => 'OK']);
+})->where('any', '.*');
+
+
