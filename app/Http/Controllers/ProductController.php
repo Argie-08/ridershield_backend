@@ -29,7 +29,7 @@ class ProductController extends Controller
                 $image->move(public_path('images'), $new_name);
 
                 // Add the full image URL using Laravel's asset() helper
-                $imageUrls[] = asset('images/' . $new_name);
+                $imageUrls[] = secure_url('images/' . $new_name);
             }
         }
 
