@@ -50,10 +50,21 @@ class ProductController extends Controller
             201, [], JSON_PRETTY_PRINT
         );
     }
-    function getProducts (Request $request){
+    // function getProducts (Request $request){
       
-        $product = Helmet::all();
-        return response()->json(Helmet::all(),200,[], JSON_PRETTY_PRINT);
+    //     $product = Helmet::all();
+    //     return response()->json(Helmet::all(),200,[], JSON_PRETTY_PRINT);
+    // }
+
+    public function getProducts(Request $request)
+    {
+       $brand = $request->query('brand');
+       if ($brand) {
+           $products = Helmet::where('brand', $brand)->get();
+       } else {
+           $products = Helmet::all();
+       }
+       return response()->json($products, 200, [], JSON_PRETTY_PRINT);
     }
 
     function getProduct ($style){
